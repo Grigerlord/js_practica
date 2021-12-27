@@ -1,15 +1,16 @@
-# js_practica
-Curso de Platzi para practicar Javascript
+#js_practica
+Platzi course to practice Javascript
 
-# La prueba para aprender
-Ha sido difícil aprender todo esto. Son demasiados periquitos
+# The test to learn
+It has been difficult to learn all this. They are too many parakeets
 
-# Otra prueba para aprender
-Realicé un push y fue así que pude enviar los cambios a github, pero en los videos que había visto, se supone que la conección se realizaba sin hacer el push, sino solo el commit. Quién entiende a esta gente.
+# Another test to learn
+I did a push and that's how I was able to send the changes to github, but in the videos I had seen, the connection was supposed to be done without doing the push, but only the commit. Who understands these people.
 
-## Taller #1: figuras geométricas
+## Workshop # 1: geometric figures
 
-- Primer paso: definir las fórmulas
-- Segundo paso: implementar las fórmulas en javascript
-- Tercer paso: crear funciones
+- First step: define the formulas
+- Second step: implement the formulas in javascript
+- Third step: create functions
+- fourth step: integrate JS with HTML
 - cuarto paso: integrar JS con HTML
