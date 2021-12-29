@@ -13,4 +13,10 @@ I did a push and that's how I was able to send the changes to github, but in the
 - Second step: implement the formulas in javascript
 - Third step: create functions
 - fourth step: integrate JS with HTML
-- cuarto paso: integrar JS con HTML
+
+## Workshop # 2: geometric figures
+
+- First step: define the formulas
+- Second step: implement these formulas in javascript
+- Third step: create functions
+- fourth step: integrate JS with HTML
