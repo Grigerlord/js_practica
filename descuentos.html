@@ -4,36 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porcentajes y descuentos | Curso de la escuela de Javascript</title>
+    <title>Percents and discounts | JavaScript Course Shcool</title>
 </head>
 <body>
 
     <header>
-        <h1>Porcentajes y descuentos</h1>
-        <h2>Este es el segundo taller del curso practico de Javascript</h2>
+        <h1> <span id="logo"></span> Shoe Store</h1>
+        <h2>Price and discount</h2>
     </header>
 
-    <section>
+    <h3>Choose your Shoes</h3>
+    <section id="products_carousel">
+        <span id="left_arrow"></span>
 
-        <h3>Calcular el precio a pagar de tus productos con descuento</h3>
 
-        <form action="">
 
-            <label for="input_price">Escribe el precio de tu producto</label>
-            <input type="number" id="input_price">
 
-            <label for="input_discount">Escribe el descuento de tu producto</label>
-            <input type="number" id="input_discount">
 
-            <button type="button" onclick="onClickButtonPriceDiscount()">Calcular precio con descuento</button>
+        <div class="product" id="converse" onclick="converseCharacteristics()">
+            <h4>Converse</h4>
+            <img src="https://tinyurl.com/yfcp9n8n" alt="">
+        </div>
 
-            <p id="result_price"></p>
 
-        </form>
+        <div class="product" id="christian_louboutin" onclick="christianLouboutinCharacteristics()">
+            <h4>Christian Louboutin</h4>
+            <img src="https://tinyurl.com/2p936cws" alt="">
+        </div>
 
+
+        <div class="product" id="jimmy_choo" onclick="jimmyChooCharacteristics()">
+            <h4>Jimmy Choo</h4>
+            <img src="https://tinyurl.com/yc2syt9k" alt="">
+        </div>
+
+
+        <div class="product" id="aquazzura" onclick="aquazzuraCharacteristics()">
+            <h4>Aquazzura</h4>
+            <img src="https://tinyurl.com/2p98n8wu" alt="">
+        </div>
+
+
+        <div class="product" id="stuart_weitzman" onclick="stuartWeitzmanCharacteristics()">
+            <h4>Stuart Weitzman</h4>
+            <img src="https://tinyurl.com/2p89rymr" alt="">
+        </div>
+
+
+
+
+
+
+        <span id="right_arrow"></span>
+    </section>
+
+    <section id="characteristics"></section>
+
+    <section id="coupon">
+        <img src="https://tinyurl.com/58r6espb" alt="Imagen de cupones de descuento">
+        <Label>
+            <b>Win a discount coupon!</b>
+            <div id="amount_coupon"></div>
+            <button type="button" onclick="generateCoupon()" id="final_button">Get Coupon!</button>
+        </Label>
+    </section>
+
+    <section id="price_section">
+        <button  type="button" onclick="calculatePrice()">Price</button>
+        <div id="price"></div>
     </section>
 
     <script src="descuentos.js"></script>
 
 </body>
 </html>
+
+
