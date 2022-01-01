@@ -7,7 +7,7 @@ const choosed_shoe = {
     size: 0
 }
 
-let color_choosed = " ";
+let color_choosed = "Black";
 
 let amount_choosed = 1;
 
@@ -81,18 +81,18 @@ function choosedShoe(name, price, discount, color, size) {
 
     let print_characteristics = document.getElementById("characteristics");
     print_characteristics.innerHTML =
-      "<p><b>Name: </b>" + name + "</p>"
-    + "<p><b>Price: </b>" + price + "</p>"
-    + "<p><b>Discount: </b>" + discount + "</p>"
+      "<p><b>Shoe: </b>" + name + "</p>"
+    + "<p><b>Price: $</b>" + price + "</p>"
+    + "<p><b>Discount: </b>-" + discount + "%</p>"
     + "<label> <b>Color</b>"
       + "<select name='color' id='choose_color' onclick='colorChoosed()'>"
-       + "<option value='white' name='color'>White</option>"
-       + "<option value='black' name='color'>Black</option>"
+       + "<option value='White' name='color'>White</option>"
+       + "<option value='Black' name='color'>Black</option>"
        + "<option value='Blue' name='color'>Blue</option>"
       + "</select>"
     + "</label>"
     + "<label> <b>Amount</b>"
-      + "<input type='number' max='99' id='choose_amount' onclick='amountChoosed()' onKeyUp='amountChoosed()'>"
+      + "<input type='number' max='99' id='choose_amount' onclick='amountChoosed()' onKeyUp='amountChoosed()'placeholder='3 Shoes'> "
     + "</label>"
 }
 
@@ -107,7 +107,7 @@ function colorChoosed() {
 }
 
 function amountChoosed() {
-    amount_choosed = document.getElementById("choose_amount").value;
+    amount_choosed = parseInt(document.getElementById("choose_amount").value);
 }
 
 function generateCoupon() {
@@ -117,9 +117,9 @@ function generateCoupon() {
     if (new_coupon === 0) {
         amount_coupon.innerHTML = "<b>keep trying</b>"
     }else if (new_coupon === 10 || new_coupon === 20 || new_coupon === 30) {
-        amount_coupon.innerHTML = "<b>Good</b> Your coupon is: " + new_coupon + "%";
+        amount_coupon.innerHTML = "<b>Good</b> Your coupon is: -" + new_coupon + "%";
     } else{
-        amount_coupon.innerHTML = "<b>WOW!</b> Your coupon is: " + new_coupon + "%";
+        amount_coupon.innerHTML = "<b>WOW!</b> Your coupon is: -" + new_coupon + "%";
     }
 
 }
@@ -131,22 +131,24 @@ function calculatePrice() {
     const total_price = amount_choosed * choosed_shoe.price;
 
     const percentage_discounted_1 = 100 - choosed_shoe.discount;
-    const percentage_discounted_2 = 100 - new_coupon + choosed_shoe.discount;
+    const percentage_discounted_2 = 100 - (new_coupon + choosed_shoe.discount);
 
     const price_with_discount = (total_price * percentage_discounted_1) / 100;
 
-    const total_to_pay = (choosed_shoe.price * percentage_discounted_2) / 100;
+    const total_to_pay = ((choosed_shoe.price * amount_choosed) * percentage_discounted_2) / 100;
 
     let price_place = document.getElementById("price");
     price_place.innerHTML =
           `<h1>${choosed_shoe.name}</h1>`
+        + `<p><b>Color: </b> ${color_choosed}</p>`
         + `<p><b>Unity Price: </b> $${choosed_shoe.price}</p>`
         + `<p><b>Amount: </b> ${amount_choosed}</p>`
         + `<p><b>Total Price: </b> $${total_price}</p>`
-        + `<p><b>Discount: </b> ${percentage_discounted_1}%</p>`
+        + `<p><b>Discount: </b> -${choosed_shoe.discount}%</p>`
         + `<p><b>Total with discount: </b> $${price_with_discount}</p>`
-        + `<p><b>Coupon: </b> ${new_coupon}%</p>`
+        + `<p><b>Coupon: </b> -${new_coupon}%</p>`
         + `<p><b>TOTAL TO PAY:  $${total_to_pay}</b></p>`
         + `<p><small>Saved:  $${total_price - total_to_pay}</small></p>`;
 
 }
+

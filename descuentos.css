@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root{
+    --first: #ffa600;
+    --second: #4edcff;
+    --thirdt: #005f77;
+    --fourth: #ffe1a8;
+    --back: #414141;
+    --white: #fffdf8;
+    --shadow-black: 10px 10px 24px -6px rgba(0,0,0,0.63);
+    --shadow-white: -9px -14px 26px -6px rgba(255,255,255,1);
+;}
+
+
+body{
+    background-image: url("https://tinyurl.com/2yj83vwd");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    place-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+#container{
+    backdrop-filter: blur(5px);
+    width: 900px;
+    height: 700px;
+
+    overflow: hidden;
+
+    display: grid;
+}
+
+header{
+    width: 900px;
+    height: 180px;
+    border-radius: 20px;
+    padding: 15px;
+
+    display: grid;
+    justify-items: center;
+
+    color: var(--white);
+}
+
+header h1{
+    font-size: 70px;
+}
+header h2{
+    color: var(--second);
+}
+
+main{
+border-radius: 20px;
+display: grid;
+width: 900px;
+height: 520px;
+}
+
+#products_carousel{
+    display: flex;
+    width: 900px;
+    height: 300px;
+}
+
+#characteristics{
+    background-color: var(--white);
+    width: 450px;
+    height: 300px;
+    padding: 20px;
+    display: grid;
+    color: var(--black);
+    border-radius: 20px;
+}
+#characteristics p, label{
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+input, select{
+    margin-left: 30px;
+    height: 30px;
+    width: 100px;
+    opacity: 0.7;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: var(--second);
+
+    font-size: 18px;
+
+    outline: none;
+
+}
+input, select:hover:focus:active{
+    border: solid 1px var(--second);
+}
+
+#to_choose{
+    width: 450px;
+    height: 300px;
+    margin-left: 20px;
+    display: grid;
+    position: relative;
+}
+#carousel{
+    width: 2550px;
+    height: 300px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+}
+.product{
+    width: 450px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+    display: grid;
+    place-items: center;
+}
+
+#right_arrow{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    background-image: url("https://tinyurl.com/2p8u2mas");
+    background-size: cover;
+    margin-top: 120px;
+}
+
+
+
+
+h3{
+    font-size: 20px;
+}
+
