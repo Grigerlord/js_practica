@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
+    transition: all 1s ease;
 }
 
 :root{
@@ -12,8 +13,8 @@
     --fourth: #ffe1a8;
     --back: #414141;
     --white: #fffdf8;
-    --shadow-black: 10px 10px 24px -6px rgba(0,0,0,0.63);
-    --shadow-white: -9px -14px 26px -6px rgba(255,255,255,1);
+    --shadow-black: 10px 14px 26px -6px rgb(0, 0, 0);
+    --shadow-white: -10px -14px 26px -6px rgba(255,255,255,1);
 ;}
 
 
@@ -35,16 +36,18 @@ body{
 #container{
     backdrop-filter: blur(5px);
     width: 900px;
-    height: 700px;
+    max-width: 900px;
 
     overflow: hidden;
 
     display: grid;
+
+    gap: 20px;
 }
 
 header{
     width: 900px;
-    height: 180px;
+    max-width: 900px;
     border-radius: 20px;
     padding: 15px;
 
@@ -64,35 +67,32 @@ header h2{
 main{
 border-radius: 20px;
 display: grid;
+gap: 20px;
 width: 900px;
-height: 520px;
 }
 
-#products_carousel{
+#products_carousel, #coupon_total_area{
     display: flex;
     width: 900px;
-    height: 300px;
 }
 
-#characteristics{
+#characteristics {
     background-color: var(--white);
     width: 450px;
     height: 300px;
-    padding: 20px;
+    padding: 40px;
     display: grid;
     color: var(--black);
     border-radius: 20px;
 }
 #characteristics p, label{
-    font-size: 30px;
-    margin-bottom: 16px;
+    font-size: 20px;
 }
 
 input, select{
     margin-left: 30px;
     height: 30px;
     width: 100px;
-    opacity: 0.7;
     border: none;
     border-radius: 5px;
     padding-left: 10px;
@@ -103,50 +103,121 @@ input, select{
     outline: none;
 
 }
-input, select:hover:focus:active{
+input, select:hover:focus:focus{
     border: solid 1px var(--second);
 }
 
 #to_choose{
     width: 450px;
     height: 300px;
+    border-radius: 20px;
+    display: flex;
+
     margin-left: 20px;
-    display: grid;
-    position: relative;
+
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 #carousel{
-    width: 2550px;
+    width: 450px;
     height: 300px;
-    display: flex;
-    overflow: hidden;
-    position: relative;
+    display: grid;
+    border-radius: 20px;
+    margin-bottom: 50px;
 
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#carousel::-webkit-scrollbar{
+    background-color: rgba(245, 222, 179, 0);
+    width: 3px;
+}
+#carousel::-webkit-scrollbar-thumb{
+    background-color: #C850C0;
+}
+#carousel::-webkit-scrollbar-button, #carousel::-webkit-scrollbar-corner{
+    background-color: rgba(95, 158, 160, 0);
 }
 .product{
     width: 450px;
     height: 300px;
     border-radius: 20px;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    
 
     display: grid;
     place-items: center;
 }
 
-#right_arrow{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    margin-right: 0;
-    background-image: url("https://tinyurl.com/2p8u2mas");
-    background-size: cover;
-    margin-top: 120px;
-}
-
-
-
 
 h3{
     font-size: 20px;
 }
+
+
+#coupon, #price_section{
+    width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#coupon{
+    margin-right: 20px;
+    font-size: 20px;
+}
+#coupon .coupon_button{
+    background-color: var(--second);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: none;
+    box-shadow: var(--shadow-black);
+    box-shadow: var(--shadow-white);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+#coupon .coupon_button:hover{
+    color: var(--thirdt);
+    border: solid 1px var(--thirdt);
+}
+
+#price_section .price_button{
+    background-color: var(--first);
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: none;
+    box-shadow: var(--shadow-black);
+    box-shadow: var(--shadow-white);
+    font-size: 25px;
+    cursor: pointer;
+    transition: 1s ease;
+    color: var(--white);
+}
+#price_section .price_button:hover{
+    color: var(--fourth);
+    border: solid 1px var(--fourth);
+}
+
+#price{
+    font-size: 15px;
+}
+#price p{
+    margin-bottom: 5px;
+    background-color: var(--white);
+    padding: 5px;
+}
+#price .to_pay{
+    color: rgb(255, 61, 61);
+}
+
+
+
+
+
+
 

@@ -147,8 +147,9 @@ function calculatePrice() {
         + `<p><b>Discount: </b> -${choosed_shoe.discount}%</p>`
         + `<p><b>Total with discount: </b> $${price_with_discount}</p>`
         + `<p><b>Coupon: </b> -${new_coupon}%</p>`
-        + `<p><b>TOTAL TO PAY:  $${total_to_pay}</b></p>`
+        + `<p class='to_pay'><b>TOTAL TO PAY:  $${total_to_pay}</b></p>`
         + `<p><small>Saved:  $${total_price - total_to_pay}</small></p>`;
 
 }
+
 
