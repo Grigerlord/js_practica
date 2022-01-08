@@ -21,7 +21,7 @@ I did a push and that's how I was able to send the changes to github, but in the
 - Third step: create functions
 - fourth step: integrate JS with HTML
 
-## Workshop # 2: promedio. average, median and mode
+## Workshop # 3: promedio. average, median and mode
 
 - First step: define the formulas
 - Second step: implement these formulas in javascript
