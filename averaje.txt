@@ -1,0 +1,6 @@
+EL PROMEDIO PUEDE CALCULARSE CON LA MEDIA ARITMETICA.
+
+La media aritm[etica, que es la forma mas sencilla de calcular promedios pero no la mas precis, se calcula de la siguiente manera:
+
+Se suman todas las cantidades.
+Se divide el resultado entre la cantidad de elementos que sumamos anteriormente.
