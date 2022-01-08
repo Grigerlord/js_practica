@@ -1,0 +1,3 @@
+La mediana es una forma mas efectiva de calcular medias aritmeticas.
+
+Para calcularla, es necesario ordenar los elementos que tenemos de menor a mayor. Si se trata de una cantidad par, los dos elementos que se encuentren en el centro de la lista se utilizaran para calcular luego la media ritmetica. Si el numero es impar, el numero del centro sera la media aritmetica.
