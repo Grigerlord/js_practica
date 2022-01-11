@@ -1,15 +1,18 @@
 const lista1 = [];
+let nuevo_elemento = 0;
+const lista1Count = {};
 
 function guardarElemento() {
-    let nuevo_elemento = parseInt(document.getElementById("elemento").value);
+    nuevo_elemento = parseInt(document.getElementById("elemento").value);
     lista1.push(nuevo_elemento);
     alert(`Has ingresado el elemento: ${nuevo_elemento}`);
 }
 
 
 
+
 function mostrarResultado() {
-    let lista1Count = {};
+    
 
     lista1.map(
         function (elemento) {
